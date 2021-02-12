@@ -94,19 +94,31 @@
             left: -300px;
             transition: ease 0.5s all;
         }
+
         .for-vb{
             width: 100%;
             height: 50px;
             position: fixed;
             background: var(--color-darck);
-    
+            z-index: 1;
+            border-bottom: 1px solid var(--color-main);
+            box-shadow: 0px 0px 9px #67D3DE  ;
+            opacity: 0.9;
             
+        }
+        .homei{
+            
+            width:30px;
+            height:30px;
+            position: absolute;
+            top:43%;
+            color: var(--color-white);
+            left:10px;
         }
         .btn-rond-menu
         {
             width:30px;
             height:30px;
-            background: var(--color-darck);
             position: fixed;
             top:0px;
             right:10px;
@@ -294,9 +306,7 @@
         .social-media a i:hover {
                 border: 1.5px solid var(--color-main);
             } 
-        .btn {
-            
-        }
+      
             .btn a {
                 color: var(--color-white);
                 background: var(--color-main);
@@ -424,6 +434,15 @@ color: black ;
     }
      @media (max-width:1220px)
      {
+        .chiffre-style{
+            display: none;
+        }
+        .liste-presentation{
+            list-style-type: circle;
+            color: #67D3DE;
+            position: relative;
+            
+        }
          .presentation {
              width: calc(100% );
              display: block;             
@@ -443,114 +462,142 @@ color: black ;
             display: none;
             
         }
-     }
-     @media (max-width:475px){
         .container-presentation{
             display: grid;
             grid-template-areas: " texte texte"
-                                 " liste liste"            ;
+                                 " liste liste"          ;
             
         }
      }
+     @media (max-width:475px){
+       
+     }
     
      /*<!-- ----------------------------------------------------------CONTACT SECTION---------------------------------------------------------------------- -->*/
-    .section-contact{
+     .section-contact{
         width: calc(100% - 300px);
+        
         overflow: hidden;
+      
         color: var(--color-darck) ;
+       
         float: right;
-        background-color: #3B3B3D;
+        background-color: #3d3d3f;
     }
+     
+    @media(max-width:1207px){
+        .section-contact{
+            width: 100%;
+            margin-left: 0;
+        }
+        
+    }
+    @media(max-width:770px){
         .container-form{
+        flex-direction: column;
+        }
+        .contact-adress{
+            /* margin-top: 30px; */
             display: flex;
-            justify-content: space-around;
-            margin-top: 6%;
+            justify-content: center;
+        }
+        .cont{
+            display: none;
+        }
+        .form-groupe{
+            display: flex;
+            justify-content: center;
         }
         .test{
             display: flex;
-            justify-content: space-evenly;
-        }
-        .form-groupe input{
-            display: block;  
+            justify-content: center;
         }
         
-            .form-groupe textarea{
-                display: block;
-            }
-                #prenom{
-                    height: 100%;
-                    width: 100%;
-                    border-radius: 5px;
-                    background-color: #888888 ;
-                }
-                #nom{
-                    height: 100%;
-                    width: 100%;
-                    border-radius: 5px;
-                    background-color: #888888;
-                    margin-left:10px;
-                }
-                #mail{
-                    height: 100%;
-                    width: 100%;
-                    border-radius: 5px;
-                    background-color: #888888;
-                    margin-top: 20px;
-                }
-                textarea{
-                    height: 100%;
-                    width: 100%;
-                    border-radius: 5px;
-                    background-color: #888888;
-                    margin-top: 20px;
-                }
-        .button-sub{
-            margin:0 auto;
-            height: 100%;
-            width: 100%;
-            border-radius: 5px;
-            background-color: var(--color-main);
-            margin-top: 20px;
-            border-color: var(--color-main) ;
-            color:var(--color-white);        
         }
-        .liste-adress{
-            margin-top: 16px;
-            
-        }
-            .liste-adress p{
-                display: block;
-                font-size: 28px;
-                color:#E4E4E4;
-             }
-        .contact-adress-list{
-            list-style: none;
-        }
-        .cont{
-            font-size: 28px;
-            color:#E4E4E4;
-        }
-    @media(max-width:1220px){
-        .section-contact{
-            padding-top:20px ;
-            width: calc(100%);
-      
-        }
-        .container-form{
-            display: block;
-            margin-left: 30%;
-            margin-right: 30%;
-          
-        }
+     
+    
+    .container-form{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 60px;
     }
-    @media(max-width:700px){
-        .container-form{
-            display: block;
-            margin-left: 20%;
-            margin-right: 20%;
-          
-        }
-    }    
+    .test{
+        display: flex;
+        /* justify-content: space-around; */
+    }
+    .form-groupe input{
+        display: block;
+       
+        
+    }
+    
+    .form-groupe textarea{
+        display: block;
+    }
+    #mail{
+        /* padding-right: 100px; */
+    }
+    #prenom{
+        height: 35px;
+        width: 200px;
+        border-radius: 5px;
+        background-color: #888888 ;
+    }
+    #nom{
+        height: 35px;
+        width: 200px;
+        border-radius: 5px;
+        background-color: #888888;
+        margin-left:10px;
+    }
+    #mail{
+        height: 35px;
+        width: 410px;
+        border-radius: 5px;
+        background-color: #888888;
+        margin-top: 20px;
+    }
+    textarea{
+        height: 35px;
+        width: 410px;
+        border-radius: 5px;
+        background-color: #888888;
+        margin-top: 20px;
+    }
+    .button-sub{
+        margin:0 auto;
+        height: 30px;
+        width: 120px;
+        border-radius: 5px;
+        background-color: var(--color-main);
+        margin-top: 20px;
+        border-color: var(--color-main) ;
+        color:var(--color-white);
+        /* padding: 10px; */
+    
+    }
+    .liste-adress{
+        margin-top: 16px;
+        
+    }
+    .liste-adress p{
+        display: block;
+        font-size: 28px;
+        color:#E4E4E4;
+       
+    }
+    .liste-adress p i{
+        margin-right: 10px;
+    }
+    .contact-adress-list{
+        list-style: none;
+    }
+    .cont{
+        font-size: 28px;
+        color:#E4E4E4;
+    }
+    
+    /* ********************* end of contact */
     /*     <!-- ---------------------------------------------------------- SKILLS SECTION ---------------------------------------------------------------------- --> */
     
     .section-range {
